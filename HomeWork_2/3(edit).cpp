@@ -26,7 +26,7 @@ int main()
             {
                 last = j;
                 cout << i << " " << j << endl;
-                i += 1;
+                break;
             }
         }
     }
