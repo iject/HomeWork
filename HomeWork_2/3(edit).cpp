@@ -22,7 +22,7 @@ int main()
         s = sum(i);
         for (int j = 1; j < 10000; j++)
         {
-            if (s == j && sum(j) == i && i != last)
+            if (i != j && s == j && sum(j) == i && i != last)
             {
                 last = j;
                 cout << i << " " << j << endl;
