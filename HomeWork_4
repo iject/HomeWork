@@ -14,10 +14,17 @@ void print_array(int array[], const int n)
 
 void rand_array(int array[], const int n)
 {
-    int s = 0;
     for (int i = 0; i < n; i++)
     {
         array[i] = rand() % 1001 + 1000;
+    }
+}
+
+void search_s(int array[], const int n)
+{
+    int s = 0;
+    for (int i = 0; i < n; i++)
+    {
         if (array[i] % 100 / 10 % 2 == 0) s += 1;
     }
     cout << "Кол-во элементов, у которых вторая с конца цифра – чётная: " << s << "\n";
@@ -57,8 +64,10 @@ int main()
 {
     setlocale(LC_ALL, "Rus");
 
-    const int n = 20;
-    int array[n];
+    int n;
+    cout << "Введите кол-во элементов n: " << "\n" << ">> ";
+    cin >> n;
+    int* array = new int[n];
 
     //#1
     cout << "ЗАДАНИЕ №1\n";
@@ -85,4 +94,8 @@ int main()
     rand_array(array, n);
 
     print_array(array, n);
+
+    search_s(array, n);
+
+    delete[] array;
 }
