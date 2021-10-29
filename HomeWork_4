@@ -1,0 +1,88 @@
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+void print_array(int array[], const int n)
+{
+    cout << "Массив размера " << n << ": " << "\n";
+    for (int i = 0; i < n; i++)
+    {
+        cout << "array[" << i << "] = " << array[i] << "\n";
+    }
+}
+
+void rand_array(int array[], const int n)
+{
+    int s = 0;
+    for (int i = 0; i < n; i++)
+    {
+        array[i] = rand() % 1001 + 1000;
+        if (array[i] % 100 / 10 % 2 == 0) s += 1;
+    }
+    cout << "Кол-во элементов, у которых вторая с конца цифра – чётная: " << s << "\n";
+}
+
+void create_array(int array[], const int n, int a, int d)
+{
+    for (int i = 0; i < n; i++)
+    {
+        array[i] = a;
+        a += d;
+    }
+}
+
+void rand_sort_array(int array[], const int n)
+{
+    int i_rand;
+    srand(time(0));
+
+    for (int i = 0; i < n; i++)
+    {
+        array[i] = i + 1;
+    }
+
+    for (int i = 0; i < n; i++)
+    {
+        int tmp;
+        i_rand = rand() % n;
+
+        tmp = array[i];
+        array[i] = array[i_rand];
+        array[i_rand] = tmp;
+    }
+}
+
+int main()
+{
+    setlocale(LC_ALL, "Rus");
+
+    const int n = 20;
+    int array[n];
+
+    //#1
+    cout << "ЗАДАНИЕ №1\n";
+    int a, d;
+    cout << "Введите первый элемент a: " << "\n" << ">> ";
+    cin >> a;
+    cout << "Введите разность элементов d: " << "\n" << ">> ";
+    cin >> d;
+
+    create_array(array, n, a, d);
+
+    print_array(array, n);
+    
+    //#2
+    cout << "ЗАДАНИЕ №2\n";
+
+    rand_sort_array(array, n);
+
+    print_array(array, n);
+
+    //#3
+    cout << "ЗАДАНИЕ №3\n";
+
+    rand_array(array, n);
+
+    print_array(array, n);
+}
