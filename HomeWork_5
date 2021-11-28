@@ -117,4 +117,6 @@ int main()
 	getline(cin,word);
 
 	cout << find_word(s3, word) << endl;
+	
+	delete[] a;
 }
