@@ -1,0 +1,120 @@
+#include <iostream>
+#include <string>
+#include <windows.h>
+using namespace std;
+
+void palindrom(char* a)
+{
+	int n = strlen(a);
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] != a[n - i - 1])
+		{
+			cout << "Нет\n";
+			return;
+		}
+	}
+
+	cout << "Да\n";
+	return;
+}
+
+int sum(string s)
+{
+	int sum = 0;
+	int n;
+	while (s.find('+') != -1)
+	{
+		n = s.find('+');
+		sum += atoi(s.substr(0, n).c_str());
+		s.erase(0, n + 1);
+	}
+	sum += atoi(s.c_str());
+
+	return sum;
+}
+
+string name(string s)
+{
+	string s1;
+
+	s1 = s.substr(0, s.find(' '));
+	s.erase(0, s.find(' ') + 1);
+	s1 = s.substr(0, 1) + "." + s.substr(s.find(' ') + 1, 1) + ". " + s1;
+
+	return s1;
+}
+
+string editf(string s, string exp)
+{
+	if (s.rfind('.') != -1) s.erase(s.rfind('.'));
+	s += "." + exp;
+
+	return s;
+}
+
+int find_word(string s, string word)
+{
+	int sum = 0;
+
+	while (s.find(word) != -1)
+	{
+		sum += 1;
+		s.erase(0, s.find(word) + word.length());
+	}
+
+	return sum;
+}
+
+
+
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	// #1
+	cout << "#1\n";
+	char* a = new char[100];
+	cout << "Введите строку:\n" << ">> ";
+	cin >> a;
+
+	palindrom(a);
+
+	// #2
+	cout << "\n#2\n";
+	string s, trash;
+	cout << "Введите строку:\n" << ">> ";
+	getline(cin, trash);
+	getline(cin, s);
+
+	cout << sum(s) << endl;
+
+	// #3
+	cout << "\n#3\n";
+	string s1;
+	cout << "Введите строку:\n" << ">> ";
+	getline(cin,s1);
+
+	cout << name(s1) << endl;
+
+	// #4
+	cout << "\n#4\n";
+	string s2, exp;
+	cout << "Введите название файла:\n" << ">> ";
+	getline(cin,s2);
+	cout << "Введите нужное расширение файла:\n" << ">> ";
+	getline(cin,exp);
+
+	cout << editf(s2, exp) << endl;
+
+	// #5
+	cout << "\n#5\n";
+	string s3, word;
+	cout << "Введите строку:\n" << ">> ";
+	getline(cin,s3);
+	cout << "Введите слово:\n" << ">> ";
+	getline(cin,word);
+
+	cout << find_word(s3, word) << endl;
+}
