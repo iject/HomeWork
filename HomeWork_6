@@ -1,0 +1,393 @@
+#include <iostream>
+#include <ctime>
+#include <cstdlib>
+
+using namespace std;
+
+void create_mas(int** mas, int n, int m)
+{
+	for (int i = 0; i < n; i++)
+	{
+		mas[i] = new int[m];
+	}
+}
+
+void rand_mas(int* mas[], int n, int m)
+{
+	srand(time(0));
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			mas[i][j] = rand() % 101 - 50;
+		}
+	}
+}
+
+void print_mas(int* mas[], int n, int m)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			cout << mas[i][j] << '\t';
+		}
+		cout << "\n";
+	}
+	cout << "\n";
+}
+
+void min_elem(int** mas, int n, int m)
+{
+	int min_i = 0, min_j = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (mas[i][j] < mas[min_i][min_j])
+			{
+				min_i = i;
+				min_j = j;
+			}
+		}
+	}
+
+	cout << "Минимальный эл-т: " << mas[min_i][min_j] << "(" << min_i << ", " << min_j << ")\n";
+}
+
+int min_el_i(int** mas, int n, int m)
+{
+	int min_i = 0, min_j = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (mas[i][j] < mas[min_i][min_j])
+			{
+				min_i = i;
+				min_j = j;
+			}
+		}
+	}
+
+	return min_i;
+}
+
+int min_el_j(int** mas, int n, int m)
+{
+	int min_i = 0, min_j = 0;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (mas[i][j] < mas[min_i][min_j])
+			{
+				min_i = i;
+				min_j = j;
+			}
+		}
+	}
+
+	return min_j;
+}
+
+int min_polel_i(int** mas, int n, int m)
+{
+	int min_i, min_j;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (mas[i][j] > 0)
+			{
+				min_i = i;
+				min_j = j;
+				j = n;
+				i = n;
+			}
+		}
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if ((mas[i][j] < mas[min_i][min_j]) && (mas[i][j] > 0))
+			{
+				min_i = i;
+				min_j = j;
+			}
+		}
+	}
+
+	return min_i;
+}
+
+int min_polel_j(int** mas, int n, int m)
+{
+	int min_i, min_j;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if (mas[i][j] > 0)
+			{
+				min_i = i;
+				min_j = j;
+				j = n;
+				i = n;
+			}
+		}
+	}
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			if ((mas[i][j] < mas[min_i][min_j]) && (mas[i][j] > 0))
+			{
+				min_i = i;
+				min_j = j;
+			}
+		}
+	}
+
+	return min_j;
+}
+
+void delete_min(int** mas, int n, int m)
+{
+	int min_i = min_el_i(mas, n, m), min_j = min_el_j(mas, n, m);
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = min_j; j < m-1; j++)
+		{
+			mas[i][j] = mas[i][j + 1];
+		}
+		mas[i][m - 1] = 0;
+	}
+
+	for (int i = min_i; i < n - 1; i++)
+	{
+		for (int j = 0; j < m - 1; j++)
+		{
+			mas[i][j] = mas[i + 1][j];
+		}
+	}
+	
+	for (int j = 0; j < m; j++)
+	{
+		mas[n-1][j] = 0;
+	}
+}
+
+int mult_el_i_j(int** mas, int** mas_2, int m, int i_m, int j_m)
+{
+	int sum = 0;
+	for (int i = 0; i < m; i++)
+	{
+		sum += mas[i_m][i] * mas_2[i][j_m];
+	}
+
+	return sum;
+}
+
+void mult_mas(int** mas, int** mas_2, int** mas_mult, int n, int m_2, int m)
+{
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m_2; j++)
+		{
+			mas_mult[i][j] = mult_el_i_j(mas, mas_2, m, i, j);
+		}
+	}
+}
+
+
+void swp_mas(int** mas, int n, int m)
+{
+	int tmp;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = 0; j < m; j++)
+		{
+			tmp = mas[i][j];
+			mas[i][j] = mas[n - 1 - j][n - 1 - i];
+			mas[n - 1 - j][n - 1 - i] = tmp;
+		}
+		m -= 1;
+	}
+}
+
+void swp_tabl(int** mas, int n)
+{
+	int tmp, i_min, j_min, j = 0;
+	i_min = min_polel_i(mas, n, n);
+	j_min = min_polel_j(mas, n, n);
+
+	for (int i = 0; i < n; i++)
+	{
+		if (mas[i_min][i] == mas[i_min][j_min] && (i + 1) < n)
+		{
+			i += 1;
+		}
+		
+		if (mas[j][j_min] == mas[i_min][j_min] && (j + 1) < n)
+		{
+			j += 1;
+		}
+		tmp = mas[i_min][i];
+		mas[i_min][i] = mas[j][j_min];
+		mas[j][j_min] = tmp;
+		j += 1;
+	}
+}
+
+int min_str(int** mas, int n, int i)
+{
+	int min = 0;
+	for (int k = 0; k < n; k++)
+	{
+		if (mas[i][k] < mas[i][min])
+		{
+			min = k;
+		}
+	}
+	return min;
+}
+
+int max_str(int** mas, int n, int i)
+{
+	int max = 0;
+	for (int k = 0; k < n; k++)
+	{
+		if (mas[i][k] > mas[i][max])
+		{
+			max = k;
+		}
+	}
+	return max;
+}
+
+void swp_min_max(int** mas, int n, int m)
+{
+	for (int i = 1; i < n; i++)
+	{
+		mas[i][min_str(mas, m, i)] = mas[i - 1][max_str(mas, m, i - 1)];
+	}
+}
+
+int main()
+{
+	setlocale(LC_ALL, "Rus");
+	int n, m;
+	// #1
+	cout << "Task #1 \"delete\"\nВведите кол-во строк и столбцов:\n";
+	cin >> n >> m;
+	int** mas1 = new int* [n];
+	create_mas(mas1, n, m);
+
+	rand_mas(mas1, n, m);
+	print_mas(mas1, n, m);
+	cout << endl;
+
+	min_elem(mas1, n, m);
+	cout << endl;
+
+	delete_min(mas1, n, m);
+	print_mas(mas1, n, m);
+
+	delete[]mas1;
+
+	// #2
+	int n_2, m_2;
+	cout << "Task #2 \"mult\"\n";
+	cout << "Введите кол-во строк 1 матрицы: ";
+	cin >> n;
+	cout << "Введите кол-во столбцов 1 матрицы: ";
+	cin >> m;
+	cout << "Введите кол-во строк 2 матрицы: ";
+	cin >> n_2;
+	cout << "Введите кол-во столбцов 2 матрицы: ";
+	cin >> m_2;
+
+	int** mas2 = new int* [n];
+	create_mas(mas2, n, m);
+	int** mas2_2 = new int* [n_2];
+	create_mas(mas2_2, n_2, m_2);
+
+	rand_mas(mas2, n, m);
+	print_mas(mas2, n, m);
+	cout << endl;
+	rand_mas(mas2_2, n_2, m_2);
+	print_mas(mas2_2, n_2, m_2);
+	cout << endl;
+
+	int** mas_mult = new int* [n];
+	create_mas(mas_mult, n, m_2);
+	if (m == n_2)
+	{
+		mult_mas(mas2, mas2_2, mas_mult, n, m_2, m);
+	}
+	else 
+	{
+		cout << "Кол-во столбцов 1 матрицы не равно кол-ву строк 2 матрицы\n";
+	}
+	print_mas(mas_mult, n, m_2);
+	
+	delete[] mas2;
+	delete[] mas2_2;
+	delete[] mas_mult;
+	
+
+	// #3
+	cout << "Task #3 \"swp_diag\"\n";
+	cout << "Введите размер матрицы: ";
+	cin >> n;
+	int** mas3 = new int* [n];
+	create_mas(mas3, n, n);
+
+	rand_mas(mas3, n, n);
+	print_mas(mas3, n, n);
+	cout << endl;
+
+	swp_mas(mas3, n, n);
+	print_mas(mas3, n, n);
+
+	delete[] mas3;
+
+	// #4
+	cout << "task #4 \"swp_tabl\"\n";
+	cout << "введите размер таблицы: ";
+	cin >> n;
+	int** mas4 = new int* [n];
+	create_mas(mas4, n, n);
+
+	rand_mas(mas4, n, n);
+	print_mas(mas4, n, n);
+	cout << endl;
+
+	cout << "минимальный положительный эл - т: " << mas4[min_polel_i(mas4, n, n)][min_polel_j(mas4, n, n)]
+		<< "(" << min_polel_i(mas4, n, n) << "," << min_polel_j(mas4, n, n) << ")\n\n";
+
+	swp_tabl(mas4, n);
+	print_mas(mas4, n, n);
+
+	delete[] mas4;
+
+	// #5
+	cout << "Task #5 \"swp_tabl\"\n";
+	cout << "Введите кол-во строк таблицы: ";
+	cin >> n;
+	cout << "Введите кол-во столбцов таблицы: ";
+	cin >> m;
+	int** mas5 = new int* [n];
+	create_mas(mas5, n, m);
+
+	rand_mas(mas5, n, m);
+	print_mas(mas5, n, m);
+	cout << endl;
+
+	swp_min_max(mas5, n, m);
+	print_mas(mas5, n, m);
+
+	delete[]mas5;
+}
