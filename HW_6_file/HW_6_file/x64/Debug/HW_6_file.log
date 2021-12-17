@@ -1,0 +1,5 @@
+﻿  HW_6_file.cpp
+  Source.cpp
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW_6_file\HW_6_file\Source.cpp(18,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
+  HW_6_file.vcxproj -> C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW_6_file\x64\Debug\HW_6_file.exe
