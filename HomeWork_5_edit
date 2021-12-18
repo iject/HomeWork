@@ -1,0 +1,166 @@
+#include <iostream>
+#include <string>
+#include <windows.h>
+using namespace std;
+
+void palindrom(char* a)
+{
+	int n = strlen(a);
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i] != a[n - i - 1])
+		{
+			cout << "Нет\n";
+			return;
+		}
+	}
+
+	cout << "Да\n";
+	return;
+}
+
+int sum(char* a)
+{
+	int sum = 0;
+	char* s = new char[strlen(a) + 1];
+	int n = 0;
+
+	for (int i = 0; i < strlen(a); i++)// 25 + 1
+	{
+		if (a[i] != ' ')
+		{
+			s[i - n] = a[i];
+		}
+		else
+		{
+			sum += atoi(s);
+			i += 2;
+			n = i + 1;
+		}
+		s[i + 1 - n] = '\0';
+	}
+	sum += atoi(s);
+	return sum;
+}
+
+void name(char* s)
+{
+	char* first = new char[strlen(s) + 1];
+	char* middle = new char[strlen(s) + 1];
+	char* last = new char[strlen(s) + 1];
+	cin >> last >> first;
+	cin.getline(middle, strlen(s) + 1);
+	
+	cout << first[0] << ". " << middle[1] << ". " << last << endl;
+}
+
+void editf(char* s, char* exp)
+{
+	int len = 0, lens = strlen(s);
+	for (int i = lens - 1; s[i] != '.'; i--)
+	{
+		len += 1;
+	}
+
+	for (int i = 0; i < strlen(exp); i++)
+	{
+		s[lens - len + i] = exp[i];
+	}
+
+	s[lens - len + strlen(exp)] = '\0';
+
+	cout << s;
+}
+
+int find_word(char* s, char* word)
+{
+	int sum = 0, count = 0;
+
+	for (int i = 0; i < strlen(s); i++)
+	{
+		if (s[i] == word[0])
+		{
+			count = 0;
+			for (int j = 0; j < strlen(word); j++)
+			{
+				if (s[i + j] == word[j])
+				{
+					count += 1;
+				}
+				else break;
+			}
+			if (count == strlen(word)) sum += 1;
+		}
+	}
+	return sum;
+}
+
+
+
+int main()
+{
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	int n = 100;
+	
+	// #1
+	cout << "#1\n";
+
+	char* a1 = new char[n];
+	cout << "Введите строку:\n" << ">> ";
+	cin.getline(a1, n);
+
+	palindrom(a1);
+
+	delete[] a1;
+
+	// #2
+	cout << "\n#2\n";
+
+	char* a2 = new char[n];
+	cout << "Введите строку:\n" << ">> ";
+	cin.getline(a2, n);
+
+	cout << sum(a2) << endl;
+
+	delete[] a2;
+
+	// #3
+	cout << "\n#3\n";
+
+	char* a3 = new char[n];
+	cout << "Введите строку:\n" << ">> ";
+
+	name(a3);
+
+	delete[] a3;
+
+	// #4
+	cout << "\n#4\n";
+	char* a4 = new char[n];
+	char* exp = new char[n];
+	cout << "Введите название файла:\n" << ">> ";
+	cin.getline(a4, n);
+	cout << "Введите нужное расширение файла:\n" << ">> ";
+	cin.getline(exp, n);
+
+	editf(a4, exp);
+
+	delete[] a4;
+	delete[] exp;
+
+	// #5
+	cout << "\n#5\n";
+	char* a5 = new char[n];
+	char* word = new char[n];
+	cout << "Введите строку:\n" << ">> ";
+	cin.getline(a5, n);
+	cout << "Введите слово:\n" << ">> ";
+	cin.getline(word, n);
+
+	cout << find_word(a5, word);
+
+	delete[] a5;
+	delete[] word;
+}
