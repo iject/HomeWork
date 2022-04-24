@@ -1,0 +1,6 @@
+﻿  CGI.cpp
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\list_page\list_page\CGI.cpp(79,23): warning C4477: "sscanf_s": в строке форматирования "%d" требуется аргумент типа "int *", но вариативный аргумент "1" имеет тип "size_t *"
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\list_page\list_page\CGI.cpp(79,23): message : рекомендуется использовать "%zd" в строке форматирования
+  list_page.cpp
+  Создание кода...
+  list_page.vcxproj -> C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\list_page\x64\Debug\list_page.exe
