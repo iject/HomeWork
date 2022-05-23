@@ -1,0 +1,11 @@
+﻿C:\Program Files\Microsoft Visual Studio\2022\Preview\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(500,5): warning MSB8004: каталог Output заканчивается не косой чертой.  Этот экземпляр сборки добавит косую черту, поскольку она необходима для правильного определения каталога Output.
+  tree_page.cpp
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\tree_page\tree_page\tree_page.cpp(76,1): warning C4326: возвращаемый тип "main" должен быть "int", а не "void"
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\tree_page\tree_page\tree_page.cpp(78,8): warning C4101: node: неиспользованная локальная переменная
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\tree_page\tree_page\tree_page.cpp(135,12): warning C4804: >: небезопасное использование типа "bool" в операции
+  Создание кода
+  2 of 216 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  tree_page.vcxproj -> C:\openserver\domains\localhost\tree_page.cgi
