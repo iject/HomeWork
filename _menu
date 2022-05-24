@@ -2,3 +2,5 @@ index.cgi Главная страница
 second.cgi Стек
 third.cgi Очередь
 list_page.cgi Список
+list2_page.cgi Список_2
+tree_page.cgi Дерево
