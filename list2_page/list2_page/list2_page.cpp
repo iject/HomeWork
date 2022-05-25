@@ -82,11 +82,18 @@ void show_content()
         string* mas = new string[max + 2];
         sum(list, max, mas);
 
+        char* a_c = new char[30];
+        char* b_c = new char[30];
+        strcpy_s(a_c, 30, a);
+        strcpy_s(b_c, 30, b);
+        rev(a_c);
+        rev(b_c);
 
         cout << "<div><p><b>Исходное выражение: </b></p></div>";
-        cout << "<div><b>" << a << " " << b << " </b></div>";
-        cout << "<div><p><b>List2: </b></p></div>";
-        show_list(list, true);
+        //cout << "<div><b>" << a << " " << b << " </b></div>";
+        //cout << "<div><p><b>List2: </b></p></div>";
+        //show_list(list, true);
+        cout << "<div><b>" << a_c << " " << b_c << " </b></div>";
 
         cout << "<div><p><b>Сумма: </b></p></div>";
         for (int i = 0; i < max + 2; i++)
