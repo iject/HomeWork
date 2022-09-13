@@ -1,0 +1,15 @@
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\bin\Debug\net6.0\HW08.09(2).exe
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\bin\Debug\net6.0\HW08.09(2).deps.json
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\bin\Debug\net6.0\HW08.09(2).runtimeconfig.json
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\bin\Debug\net6.0\HW08.09(2).dll
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\bin\Debug\net6.0\HW08.09(2).pdb
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\obj\Debug\net6.0\HW08.09(2).csproj.AssemblyReference.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\obj\Debug\net6.0\HW08.09(2).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\obj\Debug\net6.0\HW08.09(2).AssemblyInfoInputs.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\obj\Debug\net6.0\HW08.09(2).AssemblyInfo.cs
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\obj\Debug\net6.0\HW08.09(2).csproj.CoreCompileInputs.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\obj\Debug\net6.0\HW08.09(2).dll
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\obj\Debug\net6.0\refint\HW08.09(2).dll
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\obj\Debug\net6.0\HW08.09(2).pdb
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\obj\Debug\net6.0\HW08.09(2).genruntimeconfig.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW08.09(2)\HW08.09(2)\obj\Debug\net6.0\ref\HW08.09(2).dll
