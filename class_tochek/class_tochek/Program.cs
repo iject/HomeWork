@@ -6,6 +6,18 @@ Point c = new Point(1, 12, -49);
 Point d = new Point(4, 9, -1);
 Point f = new Point(-852, 20, 7);
 
+Point A = new Point(0, 1, 0);
+Point B = new Point(0, 0, 0);
+Point C = new Point(1, 1, 0);
+Point D = new Point(1, 0, 0);
+Rectangulus k = new Rectangulus(A, B, C, D);
+
+Console.WriteLine($"k = {k}");
+Console.WriteLine($"Sk = {Rectangulus.S(k)}");
+Console.WriteLine($"Pk = {Rectangulus.P(k)}");
+Console.WriteLine($"len_dk = {Rectangulus.len_d(k)}");
+
+
 Console.WriteLine(a.X);
 Console.WriteLine($"b {b}");
 Console.WriteLine($"c {c}");
