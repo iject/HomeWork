@@ -1,0 +1,15 @@
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\bin\Debug\net6.0\class_tochek.exe
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\bin\Debug\net6.0\class_tochek.deps.json
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\bin\Debug\net6.0\class_tochek.runtimeconfig.json
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\bin\Debug\net6.0\class_tochek.dll
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\bin\Debug\net6.0\class_tochek.pdb
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\obj\Debug\net6.0\class_tochek.csproj.AssemblyReference.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\obj\Debug\net6.0\class_tochek.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\obj\Debug\net6.0\class_tochek.AssemblyInfoInputs.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\obj\Debug\net6.0\class_tochek.AssemblyInfo.cs
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\obj\Debug\net6.0\class_tochek.csproj.CoreCompileInputs.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\obj\Debug\net6.0\class_tochek.dll
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\obj\Debug\net6.0\refint\class_tochek.dll
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\obj\Debug\net6.0\class_tochek.pdb
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\obj\Debug\net6.0\class_tochek.genruntimeconfig.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\class_tochek\class_tochek\obj\Debug\net6.0\ref\class_tochek.dll
