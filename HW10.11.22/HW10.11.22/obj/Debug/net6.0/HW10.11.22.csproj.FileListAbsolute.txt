@@ -1,0 +1,15 @@
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\bin\Debug\net6.0\HW10.11.22.exe
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\bin\Debug\net6.0\HW10.11.22.deps.json
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\bin\Debug\net6.0\HW10.11.22.runtimeconfig.json
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\bin\Debug\net6.0\HW10.11.22.dll
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\bin\Debug\net6.0\HW10.11.22.pdb
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\obj\Debug\net6.0\HW10.11.22.csproj.AssemblyReference.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\obj\Debug\net6.0\HW10.11.22.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\obj\Debug\net6.0\HW10.11.22.AssemblyInfoInputs.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\obj\Debug\net6.0\HW10.11.22.AssemblyInfo.cs
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\obj\Debug\net6.0\HW10.11.22.csproj.CoreCompileInputs.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\obj\Debug\net6.0\HW10.11.22.dll
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\obj\Debug\net6.0\refint\HW10.11.22.dll
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\obj\Debug\net6.0\HW10.11.22.pdb
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\obj\Debug\net6.0\HW10.11.22.genruntimeconfig.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\Дз\HW10.11.22\HW10.11.22\obj\Debug\net6.0\ref\HW10.11.22.dll
