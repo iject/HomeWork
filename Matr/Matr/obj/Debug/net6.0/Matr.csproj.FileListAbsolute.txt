@@ -1,0 +1,15 @@
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\bin\Debug\net6.0\Matr.exe
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\bin\Debug\net6.0\Matr.deps.json
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\bin\Debug\net6.0\Matr.runtimeconfig.json
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\bin\Debug\net6.0\Matr.dll
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\bin\Debug\net6.0\Matr.pdb
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\obj\Debug\net6.0\Matr.csproj.AssemblyReference.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\obj\Debug\net6.0\Matr.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\obj\Debug\net6.0\Matr.AssemblyInfoInputs.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\obj\Debug\net6.0\Matr.AssemblyInfo.cs
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\obj\Debug\net6.0\Matr.csproj.CoreCompileInputs.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\obj\Debug\net6.0\Matr.dll
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\obj\Debug\net6.0\refint\Matr.dll
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\obj\Debug\net6.0\Matr.pdb
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\obj\Debug\net6.0\Matr.genruntimeconfig.cache
+C:\Users\ПК\Desktop\My\Учёба\Окн\my programm\Matr\Matr\obj\Debug\net6.0\ref\Matr.dll
