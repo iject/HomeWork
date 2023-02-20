@@ -8,7 +8,7 @@ namespace Paint
         bool paint = false;
         Point px, py;
         Pen p = new Pen(Color.Black, 3);
-        
+
         Pen Eraser = new Pen(Color.White, 10);
         int index;
         int x, y, sx, sy, cx, cy;
@@ -82,7 +82,7 @@ namespace Paint
             if (index == 1) // указатель дл€ ручки, мен€ющий толщину
             {
                 int width = trackBar1.Value;
-                g.FillEllipse(new SolidBrush(p.Color), x - width/4, y - width/4, width / 2, width / 2);
+                g.FillEllipse(new SolidBrush(p.Color), x - width / 4, y - width / 4, width / 2, width / 2);
             }
             //e.Graphics.CopyFromScreen(new Point(cx, cy), new Point(x, y), new Size(x - cx, y - cy));
 
@@ -137,9 +137,6 @@ namespace Paint
                     px = e.Location;
                     g.DrawLine(p, px, py);
                     py = px;
-                    if(e.Y > 103) Cursor.Hide();
-                    else Cursor.Show();
-
                 }
                 if (index == 2)
                 {
@@ -160,6 +157,7 @@ namespace Paint
 
         private void Pic_MouseUp(object sender, MouseEventArgs e)
         {
+            Cursor.Show();
             paint = false;
             sx = x - cx;
             sy = y - cy;
@@ -207,6 +205,7 @@ namespace Paint
         {
             paint = true;
             py = e.Location;
+            if (index == 1) { Cursor.Hide(); }
 
             cx = e.X;
             cy = e.Y;
@@ -299,6 +298,24 @@ namespace Paint
                     }
             }
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            saveFileDialog1.Filter = "JPG(*.JPG)|*.jpg";
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                if (Pic.Image != null)
+                {
+                    Pic.Image.Save(saveFileDialog1.FileName);
+                }
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            g.Clear(Color.White);
+            Pic.Image = bm; // почему?
         }
     }
 }

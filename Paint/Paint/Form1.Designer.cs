@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             panel1 = new Panel();
+            button2 = new Button();
+            button1 = new Button();
             comboBox1 = new ComboBox();
             trackBar1 = new TrackBar();
             btncolor = new Button();
@@ -40,6 +42,7 @@
             btneraser = new Button();
             btnpen = new Button();
             Pic = new PictureBox();
+            saveFileDialog1 = new SaveFileDialog();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)trackBar1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)Pic).BeginInit();
@@ -51,6 +54,8 @@
             panel1.BackColor = SystemColors.ActiveCaption;
             panel1.BackgroundImage = (Image)resources.GetObject("panel1.BackgroundImage");
             panel1.BackgroundImageLayout = ImageLayout.Stretch;
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(comboBox1);
             panel1.Controls.Add(trackBar1);
             panel1.Controls.Add(btncolor);
@@ -60,11 +65,33 @@
             panel1.Controls.Add(btnellipse);
             panel1.Controls.Add(btneraser);
             panel1.Controls.Add(btnpen);
-            panel1.Location = new Point(0, 0);
+            panel1.Location = new Point(0, 1);
             panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
             panel1.Size = new Size(912, 103);
             panel1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.Location = new Point(862, 53);
+            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Name = "button2";
+            button2.Size = new Size(40, 40);
+            button2.TabIndex = 11;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
+            // button1
+            // 
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.Location = new Point(862, 12);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(40, 40);
+            button1.TabIndex = 10;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // comboBox1
             // 
@@ -79,7 +106,7 @@
             // trackBar1
             // 
             trackBar1.BackColor = Color.White;
-            trackBar1.Location = new Point(575, 3);
+            trackBar1.Location = new Point(579, 3);
             trackBar1.Maximum = 20;
             trackBar1.Name = "trackBar1";
             trackBar1.Size = new Size(181, 56);
@@ -92,7 +119,7 @@
             btncolor.BackColor = Color.Transparent;
             btncolor.FlatStyle = FlatStyle.Popup;
             btncolor.Image = (Image)resources.GetObject("btncolor.Image");
-            btncolor.Location = new Point(804, 16);
+            btncolor.Location = new Point(778, 16);
             btncolor.Margin = new Padding(3, 4, 3, 4);
             btncolor.Name = "btncolor";
             btncolor.Size = new Size(70, 70);
@@ -169,10 +196,10 @@
             // Pic
             // 
             Pic.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            Pic.Location = new Point(0, 105);
+            Pic.Location = new Point(0, 101);
             Pic.Margin = new Padding(3, 4, 3, 4);
             Pic.Name = "Pic";
-            Pic.Size = new Size(912, 492);
+            Pic.Size = new Size(912, 496);
             Pic.TabIndex = 1;
             Pic.TabStop = false;
             Pic.Paint += Pic_Paint;
@@ -212,5 +239,8 @@
         private Button btncolor;
         private TrackBar trackBar1;
         private ComboBox comboBox1;
+        private Button button2;
+        private Button button1;
+        private SaveFileDialog saveFileDialog1;
     }
 }
